@@ -59,7 +59,7 @@ int main(void)
 		f2 = sum;
 		f2o = sumo;
 
-		if (count !=v98)
+		if (count != 98)
 			printf(", ");
 		else
 			printf("\n");
