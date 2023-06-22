@@ -1,27 +1,18 @@
 #include "main.h"
 
 /**
- * print line - Draws a stright line according to parameter
- * @n: The number of lines to draw
- * Return: empty
+ * print_line -stright - line
+ * @n:No of times
+ * Return:Always 0
  */
 
 void print_line(int n)
-
 {
+	int i;
 
-	int x;
-
-	if (n <= 0)
+	for (i = 0; i < n; i++)
 	{
-	_putchar('\n');
-	}
-	else
-	{
-	for (x = 0; x < n; x++)
-	{
-	_putchar(95);
+		_putchar('_');
 	}
 	_putchar('\n');
-	}
 }
