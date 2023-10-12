@@ -1,22 +1,13 @@
-def is_palindrome(num):
-    return str(num) == str(num)[::-1]
+#!/usr/bin/python3
 
-def largest_palindrome_from_3_digit_product():
-    max_palindrome = 0
-    for i in range(999, 99, -1):
-        if i * i < max_palindrome:
-            break
-        for j in range(i, 99, -1):
-            prod = i * j
-            if prod <= max_palindrome:
-                break
-            if is_palindrome(prod):
-                max_palindrome = prod
-    return max_palindrome
+largest_palindrome = 0
 
-result = largest_palindrome_from_3_digit_product()
+fori i in range(100, 1000):
+    for j in range(100, 1000):
+        product = i * j
+        if str(product) == str(product) [::-1] and product > largest_palindrome:
+            largest_palindrome = product
 
-with open('102-result', 'w') as file:
-    file.write(str(result))
-
-print(f"Largest palindrome from the product of two 3-digit numbers: {result}")
+# save the result in the file
+with open("102-result", "w") as file:
+    file.write(str(largest_palindrome))
